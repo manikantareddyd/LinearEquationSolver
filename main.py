@@ -44,7 +44,8 @@ if __name__=="__main__" :
         n = [int(x) for x in next(f).split()]
         mat = [[float(x) for x in line.split()] for line in f]
     mat = np.matrix(mat)
-    print(methods)
+    for i in methodNameMap:
+        print(i,":",methodNameMap[i])
     method = int(input())
-    print(methodNameMap[method])
+    print(methodNameMap[method],file=outfile)
     methodMap[method](mat)
