@@ -2,7 +2,8 @@ import numpy as np
 import sys
 inputfile = 'input.txt'
 outfile = sys.stdout
-def gaussElimination(mat) :
+
+def GaussElimination(mat) :
     nrows, ncols = mat.shape
     ans = [0]*(nrows)
     for i in range(0,nrows) :

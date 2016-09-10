@@ -4,7 +4,7 @@ from math import sqrt
 inputfile = 'input.txt'
 outfile = sys.stdout
 
-def cholesky(mat) :
+def CholeskyLUDecomposition(mat) :
     nrows, ncols = mat.shape
     L = np.matrix(np.identity(nrows))
     for i in range(0,nrows):

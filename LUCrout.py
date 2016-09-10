@@ -2,7 +2,8 @@ import numpy as np
 import sys
 inputfile = 'input.txt'
 outfile = sys.stdout
-def LUusingCrout(mat) :
+
+def CroutLUDecomposition(mat) :
     nrows, ncols = mat.shape
     back = np.copy(mat)
     mat = mat[:,:-1]
@@ -34,7 +35,7 @@ def LUusingCrout(mat) :
     for x in ans:
         print(x,file=outfile)
     print("\n",file=outfile)
-    
+
     print("L : \n", str(L)[1:-1], file = outfile)
     print("\nU : \n", str(U)[1:-1], file = outfile)
     return

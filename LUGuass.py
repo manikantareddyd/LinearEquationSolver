@@ -2,7 +2,8 @@ import numpy as np
 import sys
 inputfile = 'input.txt'
 outfile = sys.stdout
-def LUusingGaussElimination(mat) :
+
+def GaussLUDecomposition(mat) :
     nrows, ncols = mat.shape
     U = np.copy(mat[:,:-1])
     L = np.identity(nrows)

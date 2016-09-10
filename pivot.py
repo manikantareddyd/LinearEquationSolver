@@ -2,6 +2,7 @@ import numpy as np
 import sys
 inputfile = 'input.txt'
 outfile = sys.stdout
+
 def pivot(mat) :
     nrows, ncols = mat.shape
     for i in range(0,nrows) :
