@@ -26,8 +26,15 @@ def LUusingGaussElimination(mat) :
             temp -= ans[j]*U[i,j]
         ans[i] = temp/U[i,i]
 
-    print("Intermediate(y) is : ", y, file = outfile)
-    print("Solution is : ", ans, file = outfile)
+    print("\ny", file = outfile)
+    for x in y:
+        print(x,file=outfile)
+
+    print("\nx", file = outfile)
+    for x in ans:
+        print(x,file=outfile)
+    print("\n",file=outfile)
+    
     print("L : \n", str(L)[1:-1], file = outfile)
-    print("U : \n", str(U)[1:-1], file = outfile)
+    print("\nU : \n", str(U)[1:-1], file = outfile)
     return (L, U)

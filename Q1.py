@@ -35,6 +35,16 @@ methodMap = {
     7 : cholesky
 }
 
+methodNameMap = {
+    1: "Gauss elimination (GE; without pivoting)",
+    2: "GE (with pivoting)",
+    3: "GE (with scaling and pivoting)",
+    4: "LU decomposition by using GE (without pivoting)",
+    5: "LU decomposition by using GE (with pivoting)",
+    6: "LU decomposition by using Crout method (without pivoting)",
+    7: "Cholesky decomposition (for symmetric positive definite matrix)" 
+}
+
 if __name__=="__main__" :
     with open(inputfile) as f:
         n = [int(x) for x in next(f).split()]
@@ -42,4 +52,5 @@ if __name__=="__main__" :
     mat = np.matrix(mat)
     print(methodPrompt)
     method = int(input())
+    print(methodNameMap[method])
     methodMap[method](mat)

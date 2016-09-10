@@ -7,5 +7,5 @@ def pivot(mat) :
     for i in range(0,nrows) :
         maxindex = np.argmax(mat[i:,i]) + i
         mat[[maxindex, i]] = mat[[i, maxindex]]
-    print("Permutation Matrix : \n", str(mat)[1:-1], file = outfile)
+    print("\nPivotted Matrix : \n", str(mat)[1:-1], file = outfile)
     return mat

@@ -13,5 +13,7 @@ def gaussElimination(mat) :
         for j in range(i, nrows) :
             temp -= ans[j]*mat[i,j]
         ans[i] = temp/mat[i,i]
-    print("\nSolution is : ", ans, file = outfile)
+    print("\nx\n", file = outfile)
+    for x in ans:
+        print(x,file=outfile)
     return ans
